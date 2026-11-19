@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bor bazlı endüstriyel flux tozu — Alazbor Kimya</title>
+<meta name="description" content="Alazbor Kimya: boraks pentahidrat ve borik asit esaslı toz flux üreticisi, kuruluş aşamasında; ilk üretim hedefi Yaz 2027. Bakır ve pirinç sert lehim ve alevle bronz kaynağı için. Gemlik / Bursa.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%230B0F14'/%3E%3Cpath d='M9 31 20 10l11 21' fill='none' stroke='%23F4F1EC' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='20' cy='24' r='4' fill='%23FF7A2F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ---------- Alazbor palet (tek kaynak) ---------- */
+:root{
+  --night:#0B0F14; --night-2:#141A22; --copper:#C8763E; --ember:#FF7A2F; --ember-d:#E5641B; --gold:#FFC46B;
+  --ivory:#F4F1EC; --sand:#EAE4DA; --ink:#121418; --muted:#5D6670; --line:#DCD5CA; --card:#FFFFFF;
+  --warn:#FFF4E8; --warnline:#F1C79E;
+  --bg:var(--ivory); --text:var(--ink); --radius:18px;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#0E1116; --sand:#151A21; --text:#ECE8E1; --muted:#9AA3AD; --line:#262C35; --card:#151A21; --warn:#2A1E14; --warnline:#6B4626; }
+}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto !important}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.6 Manrope,system-ui,-apple-system,Segoe UI,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{margin:0;font-weight:800;letter-spacing:-.025em;line-height:1.05}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ember);outline-offset:3px;border-radius:8px}
+section[id]{scroll-margin-top:80px}
+.wrap{max-width:1320px;margin:0 auto;padding:0 clamp(20px,4vw,56px)}
+body.en .tr, body:not(.en) .en{display:none !important}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--copper)}
+.kicker::before{content:"";width:28px;height:2px;background:currentColor}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.js-anim [data-reveal]{opacity:0;transform:translateY(28px)}
+.js-anim [data-clip]{clip-path:inset(100% 0 0 0)}
+.js-anim .cmap[data-clip]{clip-path:inset(0 0 0 100%)}
+.js-anim .flow{--line:0}
+.js-anim .rv-h{clip-path:inset(0 0 100% 0);transform:translateY(24px)}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:999px;font:700 15px Manrope;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .2s,border-color .2s,color .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn.fire{background:var(--ember);color:#0B0F14}
+.btn.fire:hover{background:var(--gold)}
+.btn.line{border:1.5px solid rgba(244,241,236,.45);color:#F4F1EC;background:transparent}
+.btn.line:hover{border-color:#F4F1EC}
+.btn.soft{background:var(--sand);color:var(--text);border:1.5px solid var(--line)}
+.btn.soft:hover{border-color:var(--text)}
+.btn[hidden]{display:none}
+
+/* ---------- header ---------- */
+header{position:fixed;inset:0 0 auto 0;z-index:40;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+header.solid,header.open{background:rgba(11,15,20,.92);backdrop-filter:blur(12px);border-color:rgba(255,255,255,.08)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px;color:#F4F1EC}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo svg{width:34px;height:34px;flex:none}
+.logo span{font-weight:800;font-size:22px;letter-spacing:-.02em}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;font-size:14px;font-weight:600;opacity:.82;position:relative;padding:6px 0}
+nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--ember);transition:right .25s}
+nav a:hover,nav a.active{opacity:1}
+nav a:hover::after,nav a.active::after{right:0}
+.right{display:flex;align-items:center;gap:12px}
+.lang{display:flex;border:1px solid rgba(244,241,236,.3);border-radius:999px;overflow:hidden}
+.lang button{border:0;background:transparent;color:#F4F1EC;font:700 12px Manrope;padding:7px 12px;cursor:pointer;opacity:.75}
+.lang button[aria-pressed="true"]{background:#F4F1EC;color:#0B0F14;opacity:1}
+.hbtn{padding:10px 16px;font-size:14px}
+.menu{display:none;border:1px solid rgba(244,241,236,.3);background:transparent;color:#F4F1EC;border-radius:10px;width:42px;height:38px;cursor:pointer}
+.menu svg{width:20px;height:20px}
+@media (max-width:1020px){
+  .menu{display:inline-grid;place-items:center}
+  nav{position:absolute;top:76px;left:0;right:0;background:rgba(11,15,20,.97);border-bottom:1px solid rgba(255,255,255,.08);display:none}
+  header.open nav{display:block}
+  nav ul{flex-direction:column;gap:0;padding:8px 24px 18px}
+  nav a{display:block;padding:13px 0;font-size:17px;border-bottom:1px solid rgba(255,255,255,.07)}
+  nav a::after{display:none}
+}
+@media (max-width:560px){ .hbtn{display:none} }
+
+/* ---------- hero (tam ekran görsel) ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;background:var(--night);color:#F4F1EC;overflow:hidden}
+.photo{position:absolute;inset:0 0 0 15%;background:url(gorseller/flux-tozu.jpg) 50% 58%/cover no-repeat;opacity:0;transition:opacity 1.2s;transform-origin:62% 58%}
+.has-photo .photo{opacity:1;animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.1)}}
+#heat{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(90deg,rgba(11,15,20,.9) 0%,rgba(11,15,20,.8) 28%,rgba(11,15,20,.4) 46%,rgba(11,15,20,0) 58%),linear-gradient(180deg,rgba(11,15,20,.55) 0%,transparent 26%,transparent 62%,rgba(11,15,20,.85) 100%)}
+@media (max-width:820px){ .photo{inset:0;background-position:60% 58%} .hero::after{background:linear-gradient(180deg,rgba(11,15,20,.6) 0%,rgba(11,15,20,.35) 35%,rgba(11,15,20,.88) 80%)} }
+.hero .wrap{position:relative;z-index:2;width:100%;padding-bottom:9vh;padding-top:140px}
+.hero h1{font-size:clamp(42px,5.4vw,78px);line-height:.98;max-width:11.5ch;margin-top:18px}
+.hero h2{font-size:clamp(22px,2vw,30px);margin-top:14px;background:linear-gradient(90deg,var(--gold),var(--ember) 55%,var(--copper));-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+.hero .lead{font-size:clamp(16px,1.5vw,20px);max-width:580px;margin:22px 0 0;color:#DCD6CC}
+.status{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:22px;padding:8px 14px;border:1px solid rgba(244,241,236,.28);border-radius:999px;font-size:13px;font-weight:600;color:#E8E2D8;background:rgba(11,15,20,.45);backdrop-filter:blur(6px)}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--ember);box-shadow:0 0 10px var(--ember)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.cta .btn{min-height:52px;padding:0 26px}
+
+/* ---------- statement ---------- */
+.statement{padding:130px 0 90px}
+.statement h2{font-size:clamp(30px,4.4vw,58px);max-width:21ch;margin-top:18px}
+.statement h2 span.mut{color:var(--muted)}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);margin-top:70px;border-top:1px solid var(--line)}
+.pillar{padding:30px 30px 10px 0}
+.pillar+.pillar{padding-left:30px;border-left:1px solid var(--line)}
+.pillar b{display:block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);margin-bottom:12px}
+.pillar h3{font-size:23px;margin-bottom:10px;letter-spacing:-.015em}
+.pillar p{margin:0;color:var(--muted);font-size:16px}
+@media (max-width:820px){ .pillars{grid-template-columns:1fr} .pillar+.pillar{border-left:0;padding-left:0;border-top:1px solid var(--line)} }
+
+/* ---------- applications ---------- */
+.apps{padding:30px 0 120px}
+.sec-top{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:40px;flex-wrap:wrap}
+.sec-top h2{font-size:clamp(32px,4.4vw,62px);max-width:16ch;margin-top:14px}
+.sec-top p{max-width:460px;color:var(--muted);margin:0}
+.tiles{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+.tile:nth-child(1),.tile:nth-child(4){grid-column:span 7}
+.tile:nth-child(2),.tile:nth-child(3){grid-column:span 5}
+@media (max-width:820px){ .tile:nth-child(n){grid-column:1/-1} }
+.tile{position:relative;height:clamp(300px,30vw,400px);border-radius:10px;overflow:hidden;color:#F4F1EC;display:flex;align-items:flex-end;padding:28px 30px;isolation:isolate}
+.tile::before{content:"";position:absolute;inset:0;z-index:-1;transition:transform .6s ease}
+.tile:hover::before{transform:scale(1.06)}
+.tile::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(8,10,14,.7) 0%,rgba(8,10,14,.25) 32%,rgba(8,10,14,0) 52%)}
+.t1::before{filter:saturate(.86) brightness(.96)}
+.t2::before{filter:brightness(1.1) contrast(1.02)}
+.tile h3{font-size:clamp(24px,2.2vw,30px);margin-bottom:6px}
+.tile p{margin:0;font-size:15px;color:#D6D1C8}
+.tile .ix{position:absolute;top:22px;left:24px;font-size:12px;font-weight:700;letter-spacing:.16em;opacity:.85}
+.t1::before{background:url(gorseller/sert-lehim.jpg) 50% 50%/cover no-repeat,radial-gradient(60% 45% at 50% 55%,#FFD07A 0%,#FF7A2F 22%,rgba(200,118,62,.6) 40%,transparent 62%),#1A120C}
+.t2::before{background:url(gorseller/vana.jpg) 50% 50%/cover no-repeat,radial-gradient(40% 30% at 70% 30%,rgba(255,196,107,.65),transparent 70%),conic-gradient(from 210deg at 40% 60%,#7A5A22,#C9A24A,#5E4318,#B48A35,#7A5A22),#2A1F0E}
+.t3::before{background:url(gorseller/hvac.jpg) 50% 50%/cover no-repeat,repeating-linear-gradient(0deg,rgba(255,255,255,.06) 0 2px,transparent 2px 18px),radial-gradient(70% 60% at 30% 70%,#7A4A2A,transparent 70%),linear-gradient(160deg,#141A22,#2A2016 60%,#C8763E 140%)}
+.t4::before{background:url(gorseller/bronz-kaynagi.jpg) 50% 50%/cover no-repeat,radial-gradient(5px 5px at 20% 30%,#FFC46B,transparent),radial-gradient(4px 4px at 70% 20%,#FF7A2F,transparent),radial-gradient(3px 3px at 45% 45%,#FFE2A8,transparent),radial-gradient(6px 6px at 80% 60%,#FF7A2F,transparent),radial-gradient(55% 40% at 50% 85%,#FF6A1F,rgba(255,106,31,.2) 60%,transparent),#140E0A}
+
+
+button.tile{border:0;width:100%;font:inherit;text-align:left;cursor:pointer;background:none}
+.tile .more{position:absolute;top:20px;right:22px;display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:rgba(11,15,20,.55);backdrop-filter:blur(6px);border:1px solid rgba(244,241,236,.22);font-size:12px;font-weight:700;letter-spacing:.04em;transition:background .2s,border-color .2s}
+.tile .more b{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--ember);color:#0B0F14;font-size:13px;line-height:1;transition:transform .25s}
+.tile:hover .more{background:rgba(11,15,20,.8);border-color:var(--ember)}
+.tile:hover .more b{transform:rotate(90deg)}
+#appDlg{max-width:860px}
+#appDlg .ahero{position:relative;height:240px;background:#1A120C 50% 50%/cover no-repeat}
+#appDlg .ahero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,15,20,.85),rgba(11,15,20,0) 70%)}
+#appDlg .ahero h3{position:absolute;left:36px;bottom:22px;z-index:1;color:#F4F1EC;font-size:clamp(28px,3.4vw,40px);margin:0}
+#appDlg .ahero .xclose{z-index:2;background:rgba(11,15,20,.6);color:#F4F1EC;border-color:rgba(244,241,236,.3)}
+.abody{padding:30px 36px 34px}
+.abody .alead{font-size:17px;margin:0 0 24px;color:var(--text)}
+.acols{display:grid;grid-template-columns:1.1fr 1fr;gap:28px}
+@media (max-width:700px){ .acols{grid-template-columns:1fr} #appDlg .ahero{height:170px} .abody{padding:24px 22px 26px} }
+.abody h4{margin:0 0 10px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--copper)}
+.abody ul{margin:0;padding:0;list-style:none;display:grid;gap:9px}
+.abody li{position:relative;padding-left:20px;font-size:15px}
+.abody li::before{content:"";position:absolute;left:0;top:.6em;width:8px;height:8px;border-radius:2px;background:var(--ember)}
+.abody .awhy{margin:0 0 16px;font-size:15px;color:var(--muted)}
+.abody .anote{margin:0;padding:14px 16px;border-radius:10px;background:var(--warn);border:1px solid var(--warnline);font-size:14px}
+.abody .acta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;padding-top:22px;border-top:1px solid var(--line)}
+
+/* ---------- process ---------- */
+.process{background:var(--night);color:#F4F1EC;padding:110px 0 120px}
+.process .sec-top p{color:#A9B0B8}
+.flow{position:relative;display:grid;grid-template-columns:repeat(5,1fr);margin-top:40px;counter-reset:st}
+.flow::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,var(--ember),var(--copper) 60%,rgba(200,118,62,.2));transform-origin:left;transform:scaleX(var(--line,1))}
+.st{position:relative;padding:34px 22px 0 0}
+.st::before{counter-increment:st;content:"0" counter(st);display:block;font-size:clamp(64px,6.4vw,96px);line-height:1;font-weight:800;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px rgba(244,241,236,.38);margin:18px 0 22px}
+.st::after{content:"";position:absolute;top:-4px;left:0;width:10px;height:10px;border-radius:50%;background:var(--ember);box-shadow:0 0 0 4px rgba(255,122,47,.18)}
+.st h3{font-size:20px;margin-bottom:8px;letter-spacing:-.01em}
+.st p{margin:0;font-size:16px;color:#A9B0B8;max-width:22ch}
+@media (max-width:900px){ .flow{grid-template-columns:1fr 1fr;row-gap:30px} }
+@media (max-width:520px){ .flow{grid-template-columns:1fr} }
+
+/* ---------- packaging ---------- */
+.pack{padding:92px 0;background:var(--sand)}
+.pgrid{display:grid;grid-template-columns:55fr 45fr;gap:64px;align-items:center}
+@media (max-width:900px){ .pgrid{grid-template-columns:1fr} }
+.pimg{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:13/9;background:#2B2E33;box-shadow:0 40px 80px -40px rgba(11,15,20,.55)}
+.pimg img{width:100%;height:100%;object-fit:cover;display:block}
+.pgrid h2{font-size:clamp(32px,4vw,54px);margin:14px 0 18px}
+.pgrid p{color:var(--muted);margin:0 0 14px}
+.plist{list-style:none;padding:0;margin:20px 0 0;border-top:1px solid var(--line)}
+.plist li{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:56px;padding:8px 0;border-bottom:1px solid var(--line);font-weight:700;font-size:16px}
+.plist li span:last-child{color:var(--muted);font-weight:500;font-size:15px;text-align:right}
+
+/* ---------- teknik talep ---------- */
+.finder{padding:120px 0;background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fhead{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:44px}
+.fhead h2{font-size:clamp(30px,4vw,52px);margin-top:14px;max-width:16ch}
+.fhead p{color:var(--muted);margin:0}
+@media (max-width:900px){ .fhead{grid-template-columns:1fr;gap:16px} }
+.fgrid{display:grid;grid-template-columns:minmax(0,720fr) minmax(0,400fr);gap:clamp(24px,4vw,60px);align-items:start}
+@media (max-width:1000px){ .fgrid{grid-template-columns:1fr} }
+.fcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px}
+fieldset{border:0;margin:0;padding:28px 28px 26px;min-width:0;border-bottom:1px solid var(--line)}
+fieldset:last-of-type{border-bottom:0}
+fieldset[hidden]{display:none}
+legend{float:left;width:100%;padding:0;margin:0 0 16px;display:flex;align-items:baseline;gap:12px;font-size:17px;font-weight:800;letter-spacing:-.01em;color:var(--text)}
+legend + *{clear:both}
+legend .num{flex:none;display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--night);color:#F4F1EC;font-size:12px;font-weight:800}
+legend small{display:block;font-weight:500;font-size:13px;color:var(--muted);margin-top:2px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{position:relative;display:inline-flex}
+.opt input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer;z-index:1}
+.chip{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 18px;border:1.5px solid var(--line);border-radius:10px;font-size:15px;font-weight:600;line-height:1.2;background:var(--bg);color:var(--text);transition:border-color .15s,background .15s,color .15s,box-shadow .15s;user-select:none}
+.chip::before{content:"";width:14px;height:14px;border-radius:50%;border:1.5px solid currentColor;opacity:.45;flex:none;transition:all .15s}
+.opt:hover .chip{border-color:var(--copper)}
+.opt input:checked + .chip{background:var(--night);border-color:var(--night);color:#F4F1EC;box-shadow:inset 3px 0 0 var(--ember),0 8px 20px -10px rgba(11,15,20,.6)}
+.opt input:checked + .chip::before{opacity:1;background:var(--ember);border-color:var(--ember);box-shadow:inset 0 0 0 3px var(--night)}
+.opt input:focus-visible + .chip{outline:3px solid var(--ember);outline-offset:2px}
+@media (prefers-color-scheme: dark){ .opt input:checked + .chip{background:#F4F1EC;border-color:#F4F1EC;color:#0B0F14} .opt input:checked + .chip::before{box-shadow:inset 0 0 0 3px #F4F1EC} }
+.note{display:none;margin:0 22px 18px;padding:16px 18px;border-radius:14px;background:var(--warn);border:1px solid var(--warnline);font-size:15px}
+.note.show{display:block}
+.note b{display:block;margin-bottom:4px}
+/* summary panel */
+.summary{position:sticky;top:96px;background:var(--night);color:#F4F1EC;border-radius:12px;padding:30px;overflow:hidden}
+.summary::before{content:"";position:absolute;right:-30%;top:-40%;width:90%;height:90%;background:radial-gradient(closest-side,rgba(255,122,47,.28),transparent);pointer-events:none}
+.summary h3{font-size:22px;margin:0 0 6px;position:relative}
+.summary > p{margin:0 0 18px;color:#A9B0B8;font-size:14px;position:relative}
+.sumlist{list-style:none;margin:0 0 20px;padding:0;position:relative;border-top:1px solid rgba(244,241,236,.12)}
+.sumlist li{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid rgba(244,241,236,.12);font-size:14px}
+.sumlist li span:first-child{color:#A9B0B8}
+.sumlist li span:last-child{font-weight:700;text-align:right}
+.sumlist li.empty span:last-child{color:#5F6873;font-weight:500}
+.progress{position:relative;height:6px;border-radius:99px;background:rgba(244,241,236,.12);margin:0 0 20px;overflow:hidden}
+.progress i{position:absolute;inset:0 auto 0 0;width:0;background:linear-gradient(90deg,var(--gold),var(--ember));transition:width .3s}
+.acts{display:grid;gap:10px;position:relative}
+.acts .btn{width:100%}
+.acts .btn.line{border-color:rgba(244,241,236,.3)}
+.out{margin:12px 0 0;font-size:13px;color:#C9C2B6;min-height:1.2em;position:relative}
+.privacy{position:relative;margin-top:18px;padding-top:16px;border-top:1px dashed rgba(244,241,236,.18);font-size:13px;color:#A9B0B8}
+
+/* ---------- quality ---------- */
+.quality{padding:120px 0}
+.qtable{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.qrow{display:grid;grid-template-columns:1.1fr 1.6fr .9fr;gap:16px;padding:16px 22px;border-bottom:1px solid var(--line);align-items:center}
+.qrow:last-child{border-bottom:0}
+.qrow.head{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--sand)}
+.qrow b{font-weight:700}
+.qrow > span{color:var(--muted);font-size:15px}
+.pill{justify-self:start;font-style:normal;font-size:12px;font-weight:700;padding:5px 11px;border-radius:999px;background:rgba(255,122,47,.14);color:#B4551F}
+.pill.ok{background:rgba(60,140,90,.14);color:#2E7A4E}
+@media (prefers-color-scheme: dark){ .pill{color:#FFB27C} .pill.ok{color:#7FD3A2} }
+@media (max-width:700px){ .qrow{grid-template-columns:1fr;gap:4px} .qrow.head{display:none} }
+
+/* ---------- contact ---------- */
+.contact{position:relative;background:var(--night);color:#F4F1EC;padding:130px 0 0;overflow:hidden}
+.contact::before{content:"";position:absolute;right:-20%;top:-30%;width:80vw;height:80vw;background:radial-gradient(closest-side,rgba(255,122,47,.28),rgba(200,118,62,.1) 50%,transparent);pointer-events:none}
+.contact .wrap{position:relative}
+.cwrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(32px,5vw,80px);align-items:stretch}
+@media (max-width:960px){ .cwrap{grid-template-columns:1fr} }
+.cleft h2{font-size:clamp(40px,5.4vw,72px);max-width:12ch;margin-top:18px}
+.clead{color:#BEB7AC;margin:26px 0 14px;max-width:46ch}
+.cleft .mail{display:inline-block;font-size:clamp(26px,2.6vw,36px);font-weight:800;color:var(--gold);text-decoration:none;border-bottom:2px solid rgba(255,196,107,.4);margin-bottom:34px}
+.cleft .mail:hover{border-color:var(--gold)}
+.clines{margin:0;border-top:1px solid rgba(244,241,236,.14)}
+.clines > div{display:grid;grid-template-columns:minmax(0,200px) 1fr;gap:16px;align-items:center;min-height:58px;padding:10px 0;border-bottom:1px solid rgba(244,241,236,.14)}
+.clines dt{display:flex;align-items:center;gap:10px;color:#9AA3AD;font-size:14px}
+.clines dt svg{width:18px;height:18px;color:var(--copper)}
+.clines dd{margin:0;font-weight:700;font-size:16px}
+.clines a{text-decoration:none}
+.clines a:hover{color:var(--gold)}
+@media (max-width:520px){ .clines > div{grid-template-columns:1fr;gap:2px} }
+.cmap{position:relative;border-radius:10px;overflow:hidden;min-height:440px;background:#1A2028;border:1px solid rgba(244,241,236,.12)}
+.cmap iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1) invert(.92) contrast(.88) brightness(.85)}
+.mpin{position:absolute;left:50%;top:46%;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:var(--ember);box-shadow:0 0 0 6px rgba(255,122,47,.25),0 0 30px var(--ember);pointer-events:none}
+.mpin::after{content:"";position:absolute;inset:-14px;border-radius:50%;border:2px solid rgba(255,122,47,.5);animation:ping 2s ease-out infinite}
+@keyframes ping{from{transform:scale(.4);opacity:1}to{transform:scale(1.6);opacity:0}}
+.cmap .pin{position:absolute;left:18px;bottom:18px;right:18px;background:rgba(11,15,20,.9);backdrop-filter:blur(8px);border:1px solid rgba(244,241,236,.14);border-radius:10px;padding:16px 18px;font-size:14px}
+.cmap .pin b{display:block;font-size:16px;margin-bottom:2px}
+.cmap .pin a{color:var(--gold);font-weight:700;text-decoration:none;font-size:13px}
+.firm{margin:56px 0 0;display:grid;grid-template-columns:2.2fr 1fr 1fr 1.2fr 1fr;border-top:1px solid rgba(244,241,236,.14);border-bottom:1px solid rgba(244,241,236,.14)}
+.firm > div{padding:20px 18px 20px 0}
+.firm > div+div{padding-left:18px;border-left:1px solid rgba(244,241,236,.1)}
+.firm dt{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#7E8792;margin-bottom:6px}
+.firm dd{margin:0;font-weight:600;font-size:14px}
+@media (max-width:960px){ .firm{grid-template-columns:1fr 1fr} .firm > div+div{border-left:0;padding-left:0} .firm > div{border-bottom:1px solid rgba(244,241,236,.08)} }
+.note-demo{margin-top:18px;font-size:12px;color:#7E8792}
+.foot{margin-top:90px;padding:40px 0 34px;border-top:1px solid rgba(244,241,236,.1);display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;font-size:14px;color:#A9B0B8}
+.foot h4{margin:0 0 12px;color:#F4F1EC;font-size:14px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot a{text-decoration:none}
+.foot a:hover{color:#F4F1EC}
+.legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:20px 0 34px;border-top:1px solid rgba(244,241,236,.08);font-size:13px;color:#7E8792}
+@media (max-width:820px){ .foot{grid-template-columns:1fr 1fr} }
+
+/* ---------- dialog ---------- */
+dialog{border:0;padding:0;border-radius:14px;max-width:580px;width:calc(100% - 32px);background:var(--card);color:var(--text);box-shadow:0 30px 80px -20px rgba(0,0,0,.5)}
+dialog::backdrop{background:rgba(11,15,20,.72);backdrop-filter:blur(8px)}
+dialog[open]{animation:dlgIn .24s ease-out}
+@keyframes dlgIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.dlg{padding:40px}
+.dlg h3{font-size:30px;margin:8px 0 10px}
+.dlg > p{color:var(--muted);margin:0 0 20px;font-size:15px}
+.dopts{display:grid;gap:10px}
+.dopt{display:flex;align-items:center;gap:16px;min-height:78px;padding:14px 18px;border:1.5px solid var(--line);border-radius:12px;text-decoration:none;cursor:pointer;background:var(--bg);font:inherit;color:inherit;text-align:left;width:100%;transition:border-color .15s}
+.dopt{background:var(--card)!important;border-color:#E4DED5!important}
+.dopt:first-child{background:#F4E9DE!important}
+@media (prefers-color-scheme: dark){ .dopt{border-color:var(--line)!important} .dopt:first-child{background:#2A2018!important} }
+.dopt:hover{border:2px solid var(--copper)!important;padding:13px 17px}
+.dopt .ic{background:var(--sand)!important;color:var(--text)!important;transition:background .15s,color .15s}
+.dopt:hover .ic{background:rgba(255,122,47,.14)!important;color:var(--ember)!important}
+.dopt::after{content:"→";margin-left:auto;color:var(--muted);transition:transform .15s,color .15s}
+.dopt:hover::after{transform:translateX(4px);color:var(--ember)}
+.dopt .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(255,122,47,.14);color:var(--ember);flex:none}
+.dopt .ic svg{width:20px;height:20px}
+.dopt b{display:block;font-size:15px}
+.dopt small{color:var(--muted);font-size:13px}
+.xclose{position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--bg);color:var(--text);cursor:pointer;font-size:18px}
+@media (prefers-reduced-motion: reduce){ .tile::before,.btn{transition:none} .has-photo .photo{animation:none} .js-anim [data-reveal],.js-anim .rv-h{opacity:1;transform:none;clip-path:none} .js-anim [data-clip]{clip-path:none} .js-anim .flow{--line:1} }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 6h16v12H4z M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 3h3l1.5 4.5-2 1.5a12 12 0 0 0 5.9 5.9l1.5-2L21 14.4v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z M14 3v4h4 M9 12h6 M9 16h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6 M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3 M7.5 15h9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><path d="M8 8h11v12H8z M5 16V4h11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14 M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header id="hdr">
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="Alazbor — ana sayfa">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <defs><radialGradient id="dot" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#FFE2A8"/><stop offset=".55" stop-color="#FF7A2F"/><stop offset="1" stop-color="#C8763E"/></radialGradient></defs>
+        <path d="M7 33 20 8l13 25" fill="none" stroke="currentColor" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="20" cy="25" r="4.6" fill="url(#dot)"/>
+      </svg>
+      <span>alazbor</span>
+    </a>
+    <nav id="nav" aria-label="Ana menü">
+      <ul>
+        <li><a href="#urun"><span class="tr">Ürün</span><span class="en">Product</span></a></li>
+        <li><a href="#kullanim"><span class="tr">Uygulamalar</span><span class="en">Applications</span></a></li>
+        <li><a href="#surec"><span class="tr">Süreç</span><span class="en">Process</span></a></li>
+        <li><a href="#ambalaj"><span class="tr">Ambalaj</span><span class="en">Packaging</span></a></li>
+        <li><a href="#rehber"><span class="tr">Teknik talep</span><span class="en">Enquiry</span></a></li>
+        <li><a href="#kalite"><span class="tr">Kalite</span><span class="en">Quality</span></a></li>
+        <li><a href="#iletisim"><span class="tr">İletişim</span><span class="en">Contact</span></a></li>
+      </ul>
+    </nav>
+    <div class="right">
+      <div class="lang" role="group" aria-label="Dil / Language">
+        <button type="button" data-lang="tr" aria-pressed="true">TR</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="btn fire hbtn" type="button" data-open="talk"><span class="tr">Teknik görüşme</span><span class="en">Talk to us</span></button>
+      <button class="menu" type="button" aria-controls="nav" aria-expanded="false"><span class="sr tr">Menü</span><span class="sr en">Menu</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="h1">
+    <div class="photo" aria-hidden="true"></div>
+    <canvas id="heat" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <span class="kicker" data-hero>Alazbor Kimya · Gemlik / Bursa</span>
+      <h1 id="h1" data-hero><span class="tr">Bor bazlı endüstriyel flux tozu</span><span class="en">Boron-based industrial powder flux</span></h1>
+      <h2 data-hero><span class="tr">Metali birleştiren kimya.</span><span class="en">The chemistry that joins metal.</span></h2>
+      <p class="lead" data-hero><span class="tr">Bakır ve pirinç sert lehim ile alevle bronz kaynağı için planlanan boraks pentahidrat ve borik asit esaslı toz flux.</span><span class="en">A planned borax pentahydrate and boric acid powder flux for copper and brass brazing and flame braze welding.</span></p>
+      <div class="status" data-hero><i aria-hidden="true"></i><span class="tr">Üretici · kuruluş aşamasında · ilk üretim hedefi: Yaz 2027</span><span class="en">Manufacturer · in set-up phase · first production target: Summer 2027</span></div>
+      <div class="cta" data-hero>
+        <a class="btn fire" href="#rehber"><span class="tr">Teknik talep oluştur</span><span class="en">Start an enquiry</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn line" href="#kullanim"><span class="tr">Uygulama alanları</span><span class="en">Applications</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="statement" id="urun">
+    <div class="wrap">
+      <span class="kicker" data-reveal><span class="tr">Ürün</span><span class="en">Product</span></span>
+      <h2 data-reveal><span class="tr">Borat esaslı flux'lar, yüksek sıcaklıkta metal yüzeyindeki oksitleri çözer. <span class="mut">Alazbor, boraks pentahidrat ve borik asidi kontrollü karıştırma ve elemeyle tutarlı bir flux tozuna dönüştürmek üzere kuruluyor.</span></span><span class="en">Borate-based fluxes dissolve oxides on metal surfaces at high temperature. <span class="mut">Alazbor is being set up to turn borax pentahydrate and boric acid into a consistent flux powder through controlled blending and sieving.</span></span></h2>
+      <div class="pillars">
+        <div class="pillar" data-reveal><b>Na₂B₄O₇·5H₂O + H₃BO₃</b><h3><span class="tr">İki hammadde, bir amaç</span><span class="en">Two raw materials, one job</span></h3><p><span class="tr">Boraks pentahidrat ve borik asit. Uygulamaya göre karışım oranı, ürün doğrulama çalışmalarıyla belirlenecek.</span><span class="en">Borax pentahydrate and boric acid. The blend ratio per application will be set through product validation.</span></p></div>
+        <div class="pillar" data-reveal><b><span class="tr">Hedef</span><span class="en">Goal</span></b><h3><span class="tr">Parti tutarlılığı</span><span class="en">Batch consistency</span></h3><p><span class="tr">Planlanan hat: kantarlı dozaj, kontrollü karıştırma ve eleme ile tane boyutu ve oranın sabit tutulması.</span><span class="en">Planned line: weighed dosing, controlled blending and sieving to keep particle size and ratio steady.</span></p></div>
+        <div class="pillar" data-reveal><b><span class="tr">Yöntem</span><span class="en">Method</span></b><h3><span class="tr">Isıl işlem yok</span><span class="en">No heat treatment</span></h3><p><span class="tr">Fırın ya da kimyasal reaksiyon yok; hammaddelerin hidrat yapısı korunarak paketlenecek.</span><span class="en">No furnace or chemical reaction; raw materials keep their hydrate structure through to the bag.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="apps" id="kullanim">
+    <div class="wrap">
+      <div class="sec-top" data-reveal>
+        <div><span class="kicker"><span class="tr">Uygulamalar</span><span class="en">Applications</span></span><h2><span class="tr">Bakır ve pirinçle çalışanlar için.</span><span class="en">Made for copper and brass.</span></h2></div>
+        <p><span class="tr">Alevle sert lehimden bronz kaynağına: borat esaslı flux'lar yüksek sıcaklıkta metal oksitlerini çözer. Alazbor ürününün uygunluğu her uygulama için ayrıca doğrulanacak.</span><span class="en">From flame brazing to braze welding: borate-based fluxes dissolve metal oxides at high temperature. Suitability of the Alazbor product will be validated separately for each application.</span></p>
+      </div>
+      <div class="tiles">
+        <button class="tile t1" type="button" data-app="lehim" data-clip aria-haspopup="dialog"><span class="more"><span class="tr">Detaylar</span><span class="en">Details</span> <b>+</b></span><span class="ix">01</span><div><h3><span class="tr">Sert lehim</span><span class="en">Brazing</span></h3><p><span class="tr">Bakır, pirinç ve alaşımları</span><span class="en">Copper, brass and alloys</span></p></div></button>
+        <button class="tile t2" type="button" data-app="vana" data-clip aria-haspopup="dialog"><span class="more"><span class="tr">Detaylar</span><span class="en">Details</span> <b>+</b></span><span class="ix">02</span><div><h3><span class="tr">Vana ve armatür</span><span class="en">Valves &amp; fittings</span></h3><p><span class="tr">Pirinç vana, fitting, musluk</span><span class="en">Brass valves, fittings, taps</span></p></div></button>
+        <button class="tile t3" type="button" data-app="hvac" data-clip aria-haspopup="dialog"><span class="more"><span class="tr">Detaylar</span><span class="en">Details</span> <b>+</b></span><span class="ix">03</span><div><h3>HVAC-R</h3><p><span class="tr">Bakır boru ve eşanjörler</span><span class="en">Copper tube &amp; heat exchangers</span></p></div></button>
+        <button class="tile t4" type="button" data-app="bronz" data-clip aria-haspopup="dialog"><span class="more"><span class="tr">Detaylar</span><span class="en">Details</span> <b>+</b></span><span class="ix">04</span><div><h3><span class="tr">Bronz kaynağı</span><span class="en">Braze welding</span></h3><p><span class="tr">Cu–Zn çubuk, flux kaplama</span><span class="en">Cu–Zn rod, flux coating</span></p></div></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="process" id="surec">
+    <div class="wrap">
+      <div class="sec-top" data-reveal>
+        <div><span class="kicker"><span class="tr">Planlanan üretim</span><span class="en">Planned production</span></span><h2><span class="tr">Basit hat. Sıkı kontrol.</span><span class="en">Simple line. Tight control.</span></h2></div>
+        <p><span class="tr">Kurulmakta olan hattın planı: kapalı ve izlenebilir. Kimyasal reaksiyon yok; işin özü doğru tartım ve homojen karışım.</span><span class="en">The plan for the line being set up: enclosed and traceable. No chemical reaction; the craft is accurate weighing and a homogeneous blend.</span></p>
+      </div>
+      <div class="flow">
+        <div class="st"><h3><span class="tr">Kabul</span><span class="en">Intake</span></h3><p><span class="tr">Big-bag boşaltma, kuru depolama.</span><span class="en">Big-bag discharge, dry storage.</span></p></div>
+        <div class="st"><h3><span class="tr">Dozaj</span><span class="en">Dosing</span></h3><p><span class="tr">Reçeteye göre kantarlı tartım.</span><span class="en">Weighed to the recipe.</span></p></div>
+        <div class="st"><h3><span class="tr">Karıştırma</span><span class="en">Blending</span></h3><p><span class="tr">Ribbon mikserde homojenlik.</span><span class="en">Homogenised in a ribbon mixer.</span></p></div>
+        <div class="st"><h3><span class="tr">Eleme</span><span class="en">Sieving</span></h3><p><span class="tr">Titreşimli elekte tane kontrolü.</span><span class="en">Particle control on a vibrating screen.</span></p></div>
+        <div class="st"><h3><span class="tr">Paketleme</span><span class="en">Packing</span></h3><p><span class="tr">25 kg torba veya big-bag.</span><span class="en">25 kg bags or big-bags.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pack" id="ambalaj">
+    <div class="wrap pgrid">
+      <div class="pimg" data-reveal>
+        <img src="gorseller/ambalaj.jpg" alt="Beyaz 25 kg torba ve big-bag ambalaj, koyu gri zemin" width="1672" height="941" loading="lazy" decoding="async">
+      </div>
+      <div data-reveal>
+        <span class="kicker"><span class="tr">Ambalaj</span><span class="en">Packaging</span></span>
+        <h2><span class="tr">İki seçenek, kuru depolama.</span><span class="en">Two formats, kept dry.</span></h2>
+        <p><span class="tr">Borik asit nem çeker; ürün kuru ve kapalı depoda saklanmalıdır. Planlanan ambalaj seçenekleri:</span><span class="en">Boric acid absorbs moisture, so the product must be stored dry and closed. Planned packaging options:</span></p>
+        <ul class="plist">
+          <li><span><span class="tr">Torba</span><span class="en">Bag</span></span><span>25 kg</span></li>
+          <li><span>Big-bag</span><span><span class="tr">Talebe göre</span><span class="en">On request</span></span></li>
+          <li><span><span class="tr">Etiket ve SDS</span><span class="en">Label &amp; SDS</span></span><span><span class="tr">Nihai formül sonrası</span><span class="en">After final formulation</span></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="finder" id="rehber">
+    <div class="wrap">
+      <div class="fhead" data-reveal>
+        <div><span class="kicker"><span class="tr">Teknik talep</span><span class="en">Technical enquiry</span></span><h2><span class="tr">Uygulamanıza uygun flux'ı birlikte değerlendirelim.</span><span class="en">Let's assess the right flux for your application.</span></h2></div>
+        <p><span class="tr">Seçimlerinizi yapın; sağdaki özet kendiliğinden dolar. Sonra e-postayla gönderin ya da metni kopyalayın. Form bir ürün uygunluk sonucu vermez.</span><span class="en">Make your choices and the summary on the right fills itself. Then send it by email or copy the text. The form does not issue a product suitability verdict.</span></p>
+      </div>
+
+      <div class="fgrid">
+        <form id="finder" class="fcard" novalidate>
+          <fieldset>
+            <legend><span class="num">1</span><span><span class="tr">Uygulama</span><span class="en">Application</span></span></legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="uygulama" value="lehim" data-tr="Sert lehim" data-en="Brazing"><span class="chip"><span class="tr">Sert lehim</span><span class="en">Brazing</span></span></label>
+              <label class="opt"><input type="radio" name="uygulama" value="bronz" data-tr="Bronz kaynağı (alevle)" data-en="Braze welding (flame)"><span class="chip"><span class="tr">Bronz kaynağı (alevle)</span><span class="en">Braze welding (flame)</span></span></label>
+              <label class="opt"><input type="radio" name="uygulama" value="dokum" data-tr="Döküm (ön değerlendirme)" data-en="Casting (preliminary)"><span class="chip"><span class="tr">Döküm (ön değerlendirme)</span><span class="en">Casting (preliminary)</span></span></label>
+              <label class="opt"><input type="radio" name="uygulama" value="diger" data-tr="Diğer" data-en="Other"><span class="chip"><span class="tr">Diğer</span><span class="en">Other</span></span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span class="num">2</span><span><span class="tr">Birleştirilen / işlenen metaller</span><span class="en">Metals joined / processed</span></span></legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="metal" value="cucu" data-tr="Cu–Cu" data-en="Cu–Cu"><span class="chip">Cu–Cu</span></label>
+              <label class="opt"><input type="radio" name="metal" value="cupirinc" data-tr="Cu–pirinç" data-en="Cu–brass"><span class="chip"><span class="tr">Cu–pirinç</span><span class="en">Cu–brass</span></span></label>
+              <label class="opt"><input type="radio" name="metal" value="pirinc" data-tr="Pirinç–pirinç" data-en="Brass–brass"><span class="chip"><span class="tr">Pirinç–pirinç</span><span class="en">Brass–brass</span></span></label>
+              <label class="opt"><input type="radio" name="metal" value="cucelik" data-tr="Cu–çelik" data-en="Cu–steel"><span class="chip"><span class="tr">Cu–çelik</span><span class="en">Cu–steel</span></span></label>
+              <label class="opt"><input type="radio" name="metal" value="pirinccelik" data-tr="Pirinç–çelik" data-en="Brass–steel"><span class="chip"><span class="tr">Pirinç–çelik</span><span class="en">Brass–steel</span></span></label>
+              <label class="opt"><input type="radio" name="metal" value="diger" data-tr="Diğer" data-en="Other"><span class="chip"><span class="tr">Diğer</span><span class="en">Other</span></span></label>
+              <label class="opt"><input type="radio" name="metal" value="bilinmiyor" data-tr="Bilmiyorum" data-en="Not sure"><span class="chip"><span class="tr">Bilmiyorum</span><span class="en">Not sure</span></span></label>
+            </div>
+          </fieldset>
+
+          <fieldset id="fsIlave" hidden>
+            <legend><span class="num">3</span><span><span class="tr">İlave metal (lehim alaşımı)</span><span class="en">Filler metal</span></span></legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="ilave" value="cup" data-tr="Cu–P" data-en="Cu–P"><span class="chip">Cu–P</span></label>
+              <label class="opt"><input type="radio" name="ilave" value="agcup" data-tr="Ag–Cu–P" data-en="Ag–Cu–P"><span class="chip">Ag–Cu–P</span></label>
+              <label class="opt"><input type="radio" name="ilave" value="agcuzn" data-tr="Ag–Cu–Zn" data-en="Ag–Cu–Zn"><span class="chip">Ag–Cu–Zn</span></label>
+              <label class="opt"><input type="radio" name="ilave" value="cuzn" data-tr="Cu–Zn (pirinç esaslı)" data-en="Cu–Zn (brass based)"><span class="chip"><span class="tr">Cu–Zn (pirinç esaslı)</span><span class="en">Cu–Zn (brass based)</span></span></label>
+              <label class="opt"><input type="radio" name="ilave" value="diger" data-tr="Diğer" data-en="Other"><span class="chip"><span class="tr">Diğer</span><span class="en">Other</span></span></label>
+              <label class="opt"><input type="radio" name="ilave" value="bilinmiyor" data-tr="Bilmiyorum" data-en="Not sure"><span class="chip"><span class="tr">Bilmiyorum</span><span class="en">Not sure</span></span></label>
+              <label class="opt"><input type="radio" name="ilave" value="yok" data-tr="Kullanılmıyor" data-en="None"><span class="chip"><span class="tr">Kullanılmıyor</span><span class="en">None</span></span></label>
+            </div>
+          </fieldset>
+
+          <fieldset id="fsSicaklik" hidden>
+            <legend><span class="num">4</span><span><span class="tr">Bağlantı bölgesinin tahmini çalışma sıcaklığı (°C)</span><span class="en">Estimated working temperature at the joint (°C)</span><small><span class="tr">Alev sıcaklığı değil; ürünün doğrulanmış aralığı da değildir.</span><span class="en">Not the flame temperature, and not a validated product range.</span></small></span></legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="sicaklik" value="<600" data-tr="600 altı" data-en="below 600"><span class="chip">&lt; 600</span></label>
+              <label class="opt"><input type="radio" name="sicaklik" value="600-699" data-tr="600–699" data-en="600–699"><span class="chip">600–699</span></label>
+              <label class="opt"><input type="radio" name="sicaklik" value="700-799" data-tr="700–799" data-en="700–799"><span class="chip">700–799</span></label>
+              <label class="opt"><input type="radio" name="sicaklik" value="800-899" data-tr="800–899" data-en="800–899"><span class="chip">800–899</span></label>
+              <label class="opt"><input type="radio" name="sicaklik" value="900-999" data-tr="900–999" data-en="900–999"><span class="chip">900–999</span></label>
+              <label class="opt"><input type="radio" name="sicaklik" value=">=1000" data-tr="1000 ve üzeri" data-en="1000 and above"><span class="chip">≥ 1000</span></label>
+              <label class="opt"><input type="radio" name="sicaklik" value="bilinmiyor" data-tr="Bilmiyorum" data-en="Not sure"><span class="chip"><span class="tr">Bilmiyorum</span><span class="en">Not sure</span></span></label>
+            </div>
+          </fieldset>
+
+          <div class="note" id="noteCuP" role="status">
+            <b><span class="tr">Teknik bilgilendirme</span><span class="en">Technical note</span></b>
+            <span class="tr">Bakır–bakır bağlantılarında Cu–P veya Ag–Cu–P esaslı sert lehim ilave metalleri kullanıldığında, uygun işlem koşullarında genellikle ilave flux gerekmez. Bu nedenle uygulamanızda flux kullanımına ihtiyaç olmayabilir. Bağlantıda pirinç bulunuyorsa flux kullanımı gerekebilir. Çelik bağlantılarda ise Cu–P esaslı ilave metaller genel olarak önerilmez; farklı bir ilave metal seçimi değerlendirilmelidir. Kesin seçim, kullanılan alaşım ve işlem koşullarına göre yapılmalıdır.</span>
+            <span class="en">For copper-to-copper joints brazed with Cu–P or Ag–Cu–P filler metals, additional flux is usually not required under suitable process conditions, so your application may not need flux. If brass is involved, flux may be required. For steel joints, Cu–P based fillers are generally not recommended; a different filler metal should be considered. The final choice depends on the alloy and process conditions.</span>
+          </div>
+          <div class="note" id="noteSteel" role="status">
+            <b><span class="tr">Teknik bilgilendirme</span><span class="en">Technical note</span></b>
+            <span class="tr">Çelik içeren bağlantılarda Cu–P esaslı ilave metaller genel olarak önerilmez; farklı bir ilave metal seçimi değerlendirilmelidir. Talebinizi yine de iletebilirsiniz.</span>
+            <span class="en">For joints involving steel, Cu–P based fillers are generally not recommended; a different filler metal should be considered. You can still send your enquiry.</span>
+          </div>
+          <div class="note" id="noteCast" role="status">
+            <b><span class="tr">Teknik bilgilendirme</span><span class="en">Technical note</span></b>
+            <span class="tr">Ergiyik metale doğrudan uygulamada genellikle susuz boraks tercih edilir; hidratlı boratlar hızlı ısıtmada kabarma ve sıçrama riski taşır. Alazbor'un planlanan hidratlı boraks esaslı karışımı bu kullanım için doğrulanmamıştır.</span>
+            <span class="en">For direct application to molten metal, anhydrous borax is generally preferred; hydrated borates can swell and spatter when heated quickly. Alazbor's planned hydrated-borax blend has not been validated for this use.</span>
+          </div>
+          <div class="note" id="noteLowT" role="status">
+            <b><span class="tr">Teknik bilgilendirme</span><span class="en">Technical note</span></b>
+            <span class="tr">Seçtiğiniz sıcaklık aralığı, boraks–borik asit esaslı yüksek sıcaklık flux'larının tipik etkin çalışma bölgesinin altında olabilir. Bu uygulamada özel düşük sıcaklık flux'ı gerekebilir; Alazbor'un planlanan ürününün bu koşullara uygunluğu doğrulanmış değildir.</span>
+            <span class="en">The temperature range you selected may be below the typical active range of borax–boric acid high-temperature fluxes. This application may need a dedicated low-temperature flux; the suitability of Alazbor's planned product for these conditions has not been validated.</span>
+          </div>
+
+          <fieldset>
+            <legend><span class="num" data-n>5</span><span><span class="tr">Isıtma yöntemi</span><span class="en">Heating method</span></span></legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="yontem" value="alev" data-tr="Alev" data-en="Torch"><span class="chip"><span class="tr">Alev</span><span class="en">Torch</span></span></label>
+              <label class="opt"><input type="radio" name="yontem" value="induksiyon" data-tr="İndüksiyon" data-en="Induction"><span class="chip"><span class="tr">İndüksiyon</span><span class="en">Induction</span></span></label>
+              <label class="opt"><input type="radio" name="yontem" value="firin" data-tr="Fırın" data-en="Furnace"><span class="chip"><span class="tr">Fırın</span><span class="en">Furnace</span></span></label>
+              <label class="opt"><input type="radio" name="yontem" value="direnc" data-tr="Direnç ısıtması" data-en="Resistance"><span class="chip"><span class="tr">Direnç</span><span class="en">Resistance</span></span></label>
+              <label class="opt"><input type="radio" name="yontem" value="diger" data-tr="Diğer" data-en="Other"><span class="chip"><span class="tr">Diğer</span><span class="en">Other</span></span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span class="num" data-n>6</span><span><span class="tr">İşlem ortamı</span><span class="en">Process atmosphere</span></span></legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="ortam" value="acik" data-tr="Açık hava" data-en="Open air"><span class="chip"><span class="tr">Açık hava</span><span class="en">Open air</span></span></label>
+              <label class="opt"><input type="radio" name="ortam" value="koruyucu" data-tr="Koruyucu atmosfer" data-en="Protective atmosphere"><span class="chip"><span class="tr">Koruyucu atmosfer</span><span class="en">Protective atmosphere</span></span></label>
+              <label class="opt"><input type="radio" name="ortam" value="vakum" data-tr="Vakum" data-en="Vacuum"><span class="chip"><span class="tr">Vakum</span><span class="en">Vacuum</span></span></label>
+              <label class="opt"><input type="radio" name="ortam" value="bilinmiyor" data-tr="Bilmiyorum" data-en="Not sure"><span class="chip"><span class="tr">Bilmiyorum</span><span class="en">Not sure</span></span></label>
+            </div>
+          </fieldset>
+
+          <div class="note" id="noteFurnace" role="status">
+            <b><span class="tr">Ayrı değerlendirme</span><span class="en">Separate assessment</span></b>
+            <span class="tr">Fırında koruyucu atmosfer veya vakum altında yapılan işlemlerde flux gerekliliği, fırın atmosferine ve kullanılan malzemelere göre değişir. Bu talebi ayrıca değerlendiririz.</span>
+            <span class="en">In furnace brazing under protective atmosphere or vacuum, the need for flux depends on the atmosphere and materials. We will assess this enquiry separately.</span>
+          </div>
+
+          <fieldset>
+            <legend><span class="num" data-n>7</span><span><span class="tr">Aylık tahmini tüketim</span><span class="en">Estimated monthly use</span></span></legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="miktar" value="<1t" data-tr="1 ton altı" data-en="below 1 t"><span class="chip">&lt; 1 t</span></label>
+              <label class="opt"><input type="radio" name="miktar" value="1-10t" data-tr="1–10 ton" data-en="1–10 t"><span class="chip">1–10 t</span></label>
+              <label class="opt"><input type="radio" name="miktar" value="10-50t" data-tr="10–50 ton" data-en="10–50 t"><span class="chip">10–50 t</span></label>
+              <label class="opt"><input type="radio" name="miktar" value=">50t" data-tr="50 ton üzeri" data-en="above 50 t"><span class="chip">&gt; 50 t</span></label>
+              <label class="opt"><input type="radio" name="miktar" value="belirsiz" data-tr="Henüz belli değil" data-en="Not yet known"><span class="chip"><span class="tr">Henüz belli değil</span><span class="en">Not yet known</span></span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span class="num" data-n>8</span><span><span class="tr">Ambalaj tercihi</span><span class="en">Packaging</span></span></legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="ambalaj" value="25kg" data-tr="25 kg torba" data-en="25 kg bag"><span class="chip"><span class="tr">25 kg torba</span><span class="en">25 kg bag</span></span></label>
+              <label class="opt"><input type="radio" name="ambalaj" value="bigbag" data-tr="Big-bag" data-en="Big-bag"><span class="chip">Big-bag</span></label>
+              <label class="opt"><input type="radio" name="ambalaj" value="belirsiz" data-tr="Henüz belli değil" data-en="Not yet known"><span class="chip"><span class="tr">Henüz belli değil</span><span class="en">Not yet known</span></span></label>
+            </div>
+          </fieldset>
+        </form>
+
+        <aside class="summary" aria-labelledby="sumTitle">
+          <h3 id="sumTitle"><span class="tr">Talep özeti</span><span class="en">Enquiry summary</span></h3>
+          <p><span class="tr">Seçimleriniz burada toplanır.</span><span class="en">Your choices collect here.</span></p>
+          <div class="progress" aria-hidden="true"><i id="prog"></i></div>
+          <ul class="sumlist" id="sumlist"></ul>
+          <div class="acts">
+            <button class="btn fire" type="button" id="aMail"><svg aria-hidden="true"><use href="#i-mail"/></svg><span class="tr">E-posta ile gönder</span><span class="en">Send by email</span></button>
+            <button class="btn line" type="button" id="aCopy"><svg aria-hidden="true"><use href="#i-copy"/></svg><span class="tr">Talep metnini kopyala</span><span class="en">Copy enquiry text</span></button>
+            <button class="btn line" type="button" id="aWa" hidden><svg aria-hidden="true"><use href="#i-chat"/></svg><span class="tr">WhatsApp ile görüş</span><span class="en">Chat on WhatsApp</span></button>
+          </div>
+          <p class="out" id="out" aria-live="polite"></p>
+          <div class="privacy"><span class="tr"><b>Kişisel veri istemiyoruz.</b> Seçimleriniz yalnız tarayıcınızda işlenir; hiçbir sunucuya gönderilmez ve kaydedilmez.</span><span class="en"><b>No personal data.</b> Your choices are processed only in your browser; nothing is sent to or stored on a server.</span></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="quality" id="kalite">
+    <div class="wrap">
+      <div class="sec-top" data-reveal>
+        <div><span class="kicker"><span class="tr">Kalite ve güvenlik</span><span class="en">Quality &amp; safety</span></span><h2><span class="tr">Neyin hazır, neyin planlı olduğunu açıkça söylüyoruz.</span><span class="en">We say plainly what is ready and what is planned.</span></h2></div>
+        <p><span class="tr">Aşağıdaki testler kalite kontrol planımızdır; sonuçlar, üretim ve ürün doğrulama tamamlandıkça paylaşılacak.</span><span class="en">The tests below form our quality control plan; results will be shared as production and product validation are completed.</span></p>
+      </div>
+      <div class="qtable" role="table" data-reveal>
+        <div class="qrow head" role="row"><span role="columnheader"><span class="tr">Konu</span><span class="en">Item</span></span><span role="columnheader"><span class="tr">Ne gösterir</span><span class="en">What it shows</span></span><span role="columnheader"><span class="tr">Durum</span><span class="en">Status</span></span></div>
+        <div class="qrow" role="row"><b><span class="tr">Hammadde temeli</span><span class="en">Raw material basis</span></b><span><span class="tr">Boraks pentahidrat + borik asit</span><span class="en">Borax pentahydrate + boric acid</span></span><em class="pill ok"><span class="tr">Belirlendi</span><span class="en">Defined</span></em></div>
+        <div class="qrow" role="row"><b><span class="tr">Karışım oranı</span><span class="en">Blend ratio</span></b><span><span class="tr">Uygulamaya göre oran</span><span class="en">Ratio per application</span></span><em class="pill"><span class="tr">Doğrulamada</span><span class="en">In validation</span></em></div>
+        <div class="qrow" role="row"><b><span class="tr">Nem</span><span class="en">Moisture</span></b><span><span class="tr">Topaklanma ve depolama dayanımı</span><span class="en">Caking and storage stability</span></span><em class="pill"><span class="tr">Planlandı</span><span class="en">Planned</span></em></div>
+        <div class="qrow" role="row"><b><span class="tr">Tane boyutu</span><span class="en">Particle size</span></b><span><span class="tr">Dağılım ve uygulama kolaylığı</span><span class="en">Distribution and ease of use</span></span><em class="pill"><span class="tr">Planlandı</span><span class="en">Planned</span></em></div>
+        <div class="qrow" role="row"><b><span class="tr">Homojenlik</span><span class="en">Homogeneity</span></b><span><span class="tr">Partide oran tutarlılığı (B₂O₃ tayini)</span><span class="en">Ratio consistency (B₂O₃ assay)</span></span><em class="pill"><span class="tr">Planlandı</span><span class="en">Planned</span></em></div>
+        <div class="qrow" role="row"><b><span class="tr">Etkin çalışma sıcaklığı</span><span class="en">Active temperature range</span></b><span><span class="tr">Flux'ın etkin olduğu aralık, nihai reçetede</span><span class="en">Range where the flux is active, on the final recipe</span></span><em class="pill"><span class="tr">Planlandı</span><span class="en">Planned</span></em></div>
+        <div class="qrow" role="row"><b><span class="tr">Erime ve akış</span><span class="en">Melting &amp; flow</span></b><span><span class="tr">Çalışma sıcaklığındaki davranış</span><span class="en">Behaviour at working temperature</span></span><em class="pill"><span class="tr">Planlandı</span><span class="en">Planned</span></em></div>
+        <div class="qrow" role="row"><b><span class="tr">Bakır kupon testi</span><span class="en">Copper coupon test</span></b><span><span class="tr">Oksit temizleme ve bağlantı kalitesi</span><span class="en">Oxide removal and joint quality</span></span><em class="pill"><span class="tr">Planlandı</span><span class="en">Planned</span></em></div>
+        <div class="qrow" role="row"><b><span class="tr">Korozyon kalıntısı</span><span class="en">Corrosive residue</span></b><span><span class="tr">Lehim sonrası yüzey temizliği</span><span class="en">Surface cleanliness after brazing</span></span><em class="pill"><span class="tr">Planlandı</span><span class="en">Planned</span></em></div>
+        <div class="qrow" role="row"><b>TDS / SDS</b><span><span class="tr">Teknik veri ve güvenlik bilgi formu</span><span class="en">Technical and safety data sheets</span></span><em class="pill"><span class="tr">Nihai formül sonrası</span><span class="en">After final formula</span></em></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="iletisim">
+    <div class="wrap">
+      <div class="cwrap">
+        <div class="cleft" data-reveal>
+          <span class="kicker"><span class="tr">İletişim</span><span class="en">Contact</span></span>
+          <h2><span class="tr">Bir sonraki bağlantı sizin olsun.</span><span class="en">Let's make your next joint.</span></h2>
+          <p class="clead"><span class="tr">Teknik görüşme, numune ön talebi ve ön ticari görüşmeler için yazın; genellikle bir iş günü içinde dönüyoruz.</span><span class="en">Write to us for technical discussions, preliminary sample requests and early commercial talks; we usually reply within one business day.</span></p>
+          <a class="mail" href="mailto:info@alazbor.com.tr">info@alazbor.com.tr</a>
+          <dl class="clines">
+            <div><dt><svg aria-hidden="true"><use href="#i-mail"/></svg><span class="tr">Satış ve numune</span><span class="en">Sales &amp; samples</span></dt><dd><a href="mailto:satis@alazbor.com.tr">satis@alazbor.com.tr</a></dd></div>
+            <div><dt><svg aria-hidden="true"><use href="#i-flask"/></svg><span class="tr">Teknik destek</span><span class="en">Technical support</span></dt><dd><a href="mailto:teknik@alazbor.com.tr">teknik@alazbor.com.tr</a></dd></div>
+          </dl>
+        </div>
+        <div class="cmap" data-clip>
+          <iframe title="Gemlik / Bursa haritası" loading="lazy" referrerpolicy="no-referrer" src="https://www.openstreetmap.org/export/embed.html?bbox=29.08%2C40.39%2C29.22%2C40.46&amp;layer=mapnik"></iframe>
+          <div class="pin"><b>Gemlik / Bursa</b><span class="tr">Planlanan üretim bölgesi</span><span class="en">Planned production area</span><br><a href="https://www.openstreetmap.org/#map=13/40.4317/29.1505" target="_blank" rel="noopener"><span class="tr">Haritada aç ↗</span><span class="en">Open in map ↗</span></a></div>
+        </div>
+      </div>
+
+      <dl class="firm" data-reveal>
+        <div><dt><span class="tr">Unvan</span><span class="en">Legal name</span></dt><dd>Alazbor Kimya Sanayi ve Ticaret Ltd. Şti. <span class="tr">(kuruluş aşamasında)</span><span class="en">(in formation)</span></dd></div>
+        <div><dt><span class="tr">Merkez</span><span class="en">Registered office</span></dt><dd>Gemlik / Bursa</dd></div>
+        <div><dt><span class="tr">İlk üretim hedefi</span><span class="en">First production</span></dt><dd><span class="tr">Yaz 2027</span><span class="en">Summer 2027</span></dd></div>
+      </dl>
+
+      <div class="foot">
+        <div><a class="logo" href="#top" style="color:#F4F1EC;margin-bottom:14px"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M7 33 20 8l13 25" fill="none" stroke="currentColor" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="25" r="4.6" fill="url(#dot)"/></svg><span>alazbor</span></a><p style="margin:12px 0 0;max-width:30ch"><span class="tr">Bor bazlı endüstriyel flux tozu. Gemlik / Bursa.</span><span class="en">Boron-based industrial powder flux. Gemlik, Bursa.</span></p></div>
+        <div><h4><span class="tr">Ürün</span><span class="en">Product</span></h4><ul><li><a href="#urun"><span class="tr">Flux tozu</span><span class="en">Powder flux</span></a></li><li><a href="#kullanim"><span class="tr">Uygulamalar</span><span class="en">Applications</span></a></li><li><a href="#ambalaj"><span class="tr">Ambalaj</span><span class="en">Packaging</span></a></li></ul></div>
+        <div><h4><span class="tr">Şirket</span><span class="en">Company</span></h4><ul><li><a href="#surec"><span class="tr">Planlanan üretim</span><span class="en">Planned production</span></a></li><li><a href="#kalite"><span class="tr">Kalite</span><span class="en">Quality</span></a></li><li><a href="#iletisim"><span class="tr">İletişim</span><span class="en">Contact</span></a></li></ul></div>
+      </div>
+      <div class="legal"><span>© <span id="yr">2026</span> Alazbor Kimya Sanayi ve Ticaret Ltd. Şti. <span class="tr">(kuruluş aşamasında)</span><span class="en">(in formation)</span></span><span class="tr">Görseller temsilidir.</span><span class="en">Images are illustrative.</span></div>
+    </div>
+  </section>
+</main>
+
+<dialog id="talk" aria-labelledby="talkTitle">
+  <div class="dlg" style="position:relative">
+    <button class="xclose" type="button" data-close aria-label="Kapat / Close">×</button>
+    <span class="kicker"><span class="tr">Teknik görüşme</span><span class="en">Talk to us</span></span>
+    <h3 id="talkTitle"><span class="tr">Size nasıl ulaşalım?</span><span class="en">How would you like to reach us?</span></h3>
+    <p><span class="tr">Uygulamanızı en hızlı anlamamızı sağlayan yol teknik talep formu.</span><span class="en">The fastest way for us to understand your application is the enquiry form.</span></p>
+    <div class="dopts">
+      <a class="dopt" href="#rehber" data-close><span class="ic"><svg><use href="#i-flask"/></svg></span><span><b><span class="tr">Teknik talep formu</span><span class="en">Technical enquiry form</span></b><small><span class="tr">8 soru, kişisel veri yok</span><span class="en">8 questions, no personal data</span></small></span></a>
+      <a class="dopt" href="mailto:teknik@alazbor.com.tr?subject=Teknik%20g%C3%B6r%C3%BC%C5%9Fme"><span class="ic"><svg><use href="#i-mail"/></svg></span><span><b><span class="tr">E-posta yaz</span><span class="en">Send an email</span></b><small>teknik@alazbor.com.tr</small></span></a>
+      <a class="dopt" href="#iletisim" data-close><span class="ic"><svg><use href="#i-pin"/></svg></span><span><b><span class="tr">Tüm iletişim bilgileri</span><span class="en">All contact details</span></b><small><span class="tr">E-posta adresleri, konum</span><span class="en">Email addresses, location</span></small></span></a>
+    </div>
+  </div>
+</dialog>
+
+
+<dialog id="appDlg" aria-labelledby="appTitle">
+  <div class="ahero" id="appHero"><button class="xclose" type="button" data-close-app aria-label="Kapat / Close">×</button><h3 id="appTitle"></h3></div>
+  <div class="abody" id="appBody"></div>
+</dialog>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  /* WhatsApp Business numarası: ülke koduyla, yalnız rakam (ör. 905xxxxxxxxx). Boşsa düğme gizli kalır. */
+  var WA_NUMBER = '';
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- dil ---------- */
+  var META={
+    tr:{t:'Bor bazlı endüstriyel flux tozu — Alazbor Kimya', d:'Alazbor Kimya: boraks pentahidrat ve borik asit esaslı toz flux üreticisi, kuruluş aşamasında; ilk üretim hedefi Yaz 2027. Bakır ve pirinç sert lehim ve alevle bronz kaynağı için. Gemlik / Bursa.'},
+    en:{t:'Boron-based industrial powder flux — Alazbor Kimya', d:'Alazbor Kimya: borax pentahydrate and boric acid powder flux manufacturer in set-up phase; first production target Summer 2027. For copper and brass brazing and flame braze welding. Gemlik, Bursa, Türkiye.'}
+  };
+  var btns=document.querySelectorAll('.lang button');
+  function lang(){return document.body.classList.contains('en')?'en':'tr';}
+  function setLang(l){
+    document.body.classList.toggle('en', l==='en');
+    document.documentElement.lang=l;
+    document.title=META[l].t;
+    document.querySelector('meta[name=description]').setAttribute('content',META[l].d);
+    btns.forEach(function(b){b.setAttribute('aria-pressed', b.dataset.lang===l?'true':'false');});
+    try{localStorage.setItem('alazbor-lang',l);}catch(e){}
+    update();
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
+
+  /* ---------- yumuşak kaydırma (Lenis) + menü bağlantıları ---------- */
+  var lenis=null;
+  if(window.Lenis && !reduce){
+    lenis=new Lenis({lerp:.1,smoothWheel:true});
+    function raf(t){lenis.raf(t);requestAnimationFrame(raf);} requestAnimationFrame(raf);
+  }
+  function goTo(id){
+    var el=document.getElementById(id); if(!el) return;
+    if(lenis){lenis.scrollTo(el,{offset:id==='top'?0:-76});}
+    else{var y=el.getBoundingClientRect().top+window.pageYOffset-(id==='top'?0:76);window.scrollTo({top:y,behavior:reduce?'auto':'smooth'});}
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href^="#"]'); if(!a) return;
+    var id=a.getAttribute('href').slice(1); if(!id) return;
+    e.preventDefault();
+    if(a.hasAttribute('data-close')) closeDlg();
+    hdr.classList.remove('open'); menu.setAttribute('aria-expanded','false');
+    goTo(id);
+  });
+
+  /* ---------- header + mobil menü + aktif bölüm ---------- */
+  var hdr=document.getElementById('hdr'), menu=document.querySelector('.menu');
+  function onScroll(){hdr.classList.toggle('solid', window.scrollY>40);}
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  menu.addEventListener('click',function(){var o=hdr.classList.toggle('open');menu.setAttribute('aria-expanded',o?'true':'false');});
+  var navLinks=[].slice.call(document.querySelectorAll('#nav a'));
+  if('IntersectionObserver' in window){
+    var so=new IntersectionObserver(function(es){es.forEach(function(en){ if(en.isIntersecting){ navLinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+en.target.id);}); } });},{rootMargin:'-45% 0px -50% 0px'});
+    document.querySelectorAll('main section[id]').forEach(function(s){so.observe(s);});
+  }
+
+  /* ---------- teknik görüşme penceresi ---------- */
+  var dlg=document.getElementById('talk');
+  function openDlg(){ if(dlg.showModal){dlg.showModal();} else {dlg.setAttribute('open','');} }
+  function closeDlg(){ if(dlg.open){ dlg.close ? dlg.close() : dlg.removeAttribute('open'); } }
+  document.querySelectorAll('[data-open="talk"]').forEach(function(b){b.addEventListener('click',openDlg);});
+  dlg.querySelectorAll('button[data-close]').forEach(function(b){b.addEventListener('click',closeDlg);});
+  dlg.addEventListener('click',function(e){ if(e.target===dlg) closeDlg(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ hdr.classList.remove('open'); menu.setAttribute('aria-expanded','false'); } });
+
+  /* ---------- teknik talep formu ---------- */
+  var f=document.getElementById('finder'), out=document.getElementById('out'), sumlist=document.getElementById('sumlist'), prog=document.getElementById('prog');
+  var FIELDS=[['uygulama','Uygulama','Application'],['metal','Metaller','Metals'],['ilave','İlave metal','Filler metal',1],['sicaklik','Bağlantı sıcaklığı (°C)','Joint temp. (°C)',1],['yontem','Isıtma','Heating'],['ortam','Ortam','Atmosphere'],['miktar','Aylık tüketim','Monthly use'],['ambalaj','Ambalaj','Packaging']];
+  function val(n){var x=f.querySelector('input[name="'+n+'"]:checked');return x?x.value:'';}
+  function txt(n){var x=f.querySelector('input[name="'+n+'"]:checked');return x?x.dataset[lang()]:'';}
+  function update(){
+    var u=val('uygulama'), m=val('metal'), il=val('ilave'), y=val('yontem'), o=val('ortam');
+    var braze=(u==='lehim');
+    document.getElementById('fsIlave').hidden=!braze;
+    document.getElementById('fsSicaklik').hidden=!braze;
+    var nums=f.querySelectorAll('.num[data-n]'); var base=braze?5:3; nums.forEach(function(n,i){n.textContent=base+i;});
+    var phos=(il==='cup'||il==='agcup'), steel=(m==='cucelik'||m==='pirinccelik');
+    document.getElementById('noteCuP').classList.toggle('show', braze&&m==='cucu'&&phos);
+    document.getElementById('noteSteel').classList.toggle('show', braze&&steel&&phos);
+    document.getElementById('noteFurnace').classList.toggle('show', y==='firin'&&(o==='koruyucu'||o==='vakum'));
+    document.getElementById('noteCast').classList.toggle('show', u==='dokum');
+    var sk=val('sicaklik'); document.getElementById('noteLowT').classList.toggle('show', braze&&(sk==='<600'||sk==='600-699'));
+    var en=lang()==='en', rows=[], done=0, total=0;
+    FIELDS.forEach(function(F){ if(F[3]&&!braze) return; total++; var t=txt(F[0]); if(t) done++;
+      rows.push('<li class="'+(t?'':'empty')+'"><span>'+(en?F[2]:F[1])+'</span><span>'+(t||'—')+'</span></li>'); });
+    sumlist.innerHTML=rows.join('');
+    prog.style.width=Math.round(done/total*100)+'%';
+  }
+  f.addEventListener('change',update);
+  function body(){
+    var en=lang()==='en', braze=val('uygulama')==='lehim';
+    var L=[en?'Hello Alazbor,':'Merhaba Alazbor,','',en?'Technical enquiry (no binding offer requested):':'Teknik ön değerlendirme talebi (bağlayıcı teklif değildir):',''];
+    FIELDS.forEach(function(F){ if(F[3]&&!braze) return; L.push((en?F[2]:F[1])+': '+(txt(F[0])||'—')); });
+    L.push(''); L.push(en?'Company / country / contact: (please add)':'Firma / şehir-ülke / iletişim: (lütfen ekleyin)');
+    return L.join('\n');
+  }
+  function subj(){return lang()==='en'?'Technical enquiry — Alazbor flux':'Teknik talep — Alazbor flux';}
+  document.getElementById('aMail').addEventListener('click',function(){ location.href='mailto:teknik@alazbor.com.tr?subject='+encodeURIComponent(subj())+'&body='+encodeURIComponent(body()); });
+  document.getElementById('aCopy').addEventListener('click',function(){
+    var t=subj()+'\n\n'+body(), en=lang()==='en';
+    function done(ok){out.textContent=ok?(en?'Copied. Paste it into your email or message.':'Kopyalandı. E-postanıza veya mesajınıza yapıştırabilirsiniz.'):(en?'Copy failed; please write to teknik@alazbor.com.tr.':'Kopyalanamadı; lütfen teknik@alazbor.com.tr adresine yazın.');}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){done(true);},function(){fallback();});}else{fallback();}
+    function fallback(){try{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();var ok=document.execCommand('copy');ta.remove();done(ok);}catch(e){done(false);}}
+  });
+  var wa=document.getElementById('aWa');
+  if(WA_NUMBER){wa.hidden=false;wa.addEventListener('click',function(){window.open('https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(body()),'_blank','noopener');});}
+
+
+  /* ---------- uygulama detay pencereleri ---------- */
+  var APPS={
+    lehim:{img:'gorseller/sert-lehim.jpg', pre:{uygulama:'lehim'},
+      tr:{t:'Sert lehim', lead:'Sert lehimde flux, ısıtma sırasında metal yüzeyindeki oksitleri çözer; böylece dolgu metali yüzeyi ıslatır ve bağlantı aralığına kılcal etkiyle akar. Alazbor\'un boraks pentahidrat ve borik asit esaslı tozu yüksek sıcaklık uygulamaları için planlanıyor; performansı testlerle doğrulanacak.',
+        pts:['Bakır–pirinç ve pirinç–pirinç bağlantılar','Pirinç esaslı (Cu–Zn) ve çalışma sıcaklığı yaklaşık 750 °C\'nin üzerindeki düşük gümüşlü Ag–Cu–Zn dolgu metalleri','Alevle ve indüksiyonla sert lehim','Kuru toz uygulaması; suyla macun hazırlama ayrıca test edilecek'],
+        why:'Boraks ve borik asit ısıtıldığında borat esaslı camsı bir faz oluşturur. Bu faz yüksek sıcaklıkta metal oksitlerini çözer ve yüzeyi yeniden oksitlenmeye karşı örter.',
+        note:'Bakır–bakır bağlantılarda Cu–P veya Ag–Cu–P dolgu metali kullanılıyorsa genellikle flux gerekmez. 600–700 °C\'de çalışan yüksek gümüşlü lehimlerde florür içeren özel düşük sıcaklık flux\'ları kullanılır; planlanan ürünümüz bu sınıfta değildir. Borat kalıntısı sert ve camsıdır; yalnız sıcak su yetmeyebilir, mekanik ya da uygun kimyasal temizlik gerekebilir.'},
+      en:{t:'Brazing', lead:'In brazing, flux dissolves surface oxides as the joint heats up, so the filler metal wets the surface and flows into the joint gap by capillary action. Alazbor\'s borax pentahydrate and boric acid powder is planned for high-temperature applications; its performance will be validated by testing.',
+        pts:['Copper–brass and brass–brass joints','Brass (Cu–Zn) fillers and low-silver Ag–Cu–Zn fillers working above roughly 750 °C','Torch and induction brazing','Dry powder application; water paste preparation to be tested'],
+        why:'When heated, borax and boric acid form a glassy borate phase. At high temperature this phase dissolves metal oxides and covers the surface against re-oxidation.',
+        note:'For copper-to-copper joints with Cu–P or Ag–Cu–P fillers, flux is usually not required. High-silver alloys working at 600–700 °C use dedicated fluoride-containing low-temperature fluxes; our planned product is not in that class. Borate residue is hard and glassy; hot water alone may not be enough, and mechanical or suitable chemical cleaning may be needed.'}},
+    vana:{img:'gorseller/vana.jpg', pre:{uygulama:'lehim',metal:'pirinc'},
+      tr:{t:'Vana ve armatür', lead:'Pirinç vana, fitting ve armatürlerde bazı gövde, rakor ve geçiş bağlantıları alevle veya indüksiyonla sert lehimlenir. Flux, ısıtmayla pirinç yüzeyinde oluşan oksitleri çözer ve dolgu metalinin yüzeyi ıslatmasını sağlar.',
+        pts:['Pirinç–pirinç ve bakır–pirinç bağlantılar','Çalışma sıcaklığı uygun Cu–Zn ve düşük gümüşlü Ag–Cu–Zn dolgu metalleri','Manuel, yarı otomatik ve otomatik sert lehim hatları','Planlanan ambalaj: 25 kg torba, talebe göre big-bag'],
+        why:'Seri üretimde toz her partide aynı davranmalı. Planlanan hattımızda kantarlı dozaj, kontrollü karıştırma ve elemeyle homojenlik ve tane boyutu tutarlılığı hedefleniyor; sonuçlar ölçümle doğrulanacak.',
+        note:'Uygunluk; pirinç alaşımına, dolgu metaline, çalışma sıcaklığına ve ısıtma süresine bağlıdır. Sızdırmazlığı flux tek başına sağlamaz; bağlantı aralığı ve ısıtma profili de belirleyicidir.'},
+      en:{t:'Valves & fittings', lead:'In brass valves, fittings and taps, some bodies, unions and transition joints are torch- or induction-brazed. Flux dissolves the oxides that form on brass when heated and lets the filler metal wet the surface.',
+        pts:['Brass–brass and copper–brass joints','Cu–Zn and low-silver Ag–Cu–Zn fillers with a suitable working temperature','Manual, semi-automatic and automatic brazing lines','Planned packaging: 25 kg bags, big-bags on request'],
+        why:'In series production the powder must behave the same in every batch. Our planned line targets homogeneity and consistent particle size through weighed dosing, controlled blending and sieving; results will be verified by measurement.',
+        note:'Suitability depends on the brass alloy, filler metal, working temperature and heating time. Flux alone does not make a joint leak-tight; joint clearance and heating profile matter too.'}},
+    hvac:{img:'gorseller/hvac.jpg', pre:{uygulama:'lehim',metal:'cupirinc'},
+      tr:{t:'HVAC-R', lead:'Klima, soğutma ve ısı pompası sistemlerinde bakır borular, servis vanaları ve eşanjör bağlantıları sert lehimle birleştirilir. Bakır–bakır bağlantılarda fosforlu dolgu metali genellikle flux gerektirmez; pirinç geçişlerinde flux kullanılır.',
+        pts:['Bakır–pirinç geçişleri: servis vanası, rakor, bağlantı parçaları','Fabrika imalatı ve saha montajında alevle sert lehim','Yüksek çalışma sıcaklıklı Cu–Zn ve Ag–Cu–Zn dolgu metalleriyle ön değerlendirme','Uygunluk ve kalıntı temizlenebilirliği ayrıca doğrulanacak'],
+        why:'Soğutucu akışkan hattında sızdırmazlık ve iç temizlik kritiktir. Borat esaslı flux bağlantının dış yüzeyindeki oksitleri çözer; boru içi ise azotla korunur.',
+        note:'Flux kalıntısı soğutucu akışkan devresine girmemelidir; lehim sırasında boru iç yüzeyi kuru azot akışıyla korunmalıdır. Bakır–bakır bağlantılarda Cu–P ile genellikle flux gerekmez; teknik talep formumuz bu durumda sizi uyarır.'},
+      en:{t:'HVAC-R', lead:'In air-conditioning, refrigeration and heat-pump systems, copper tubes, service valves and heat-exchanger joints are brazed. Copper-to-copper joints with phosphorus fillers usually need no flux; brass transitions are brazed with flux.',
+        pts:['Copper–brass transitions: service valves, unions, fittings','Torch brazing in factory production and field installation','Preliminary assessment with high-temperature Cu–Zn and Ag–Cu–Zn fillers','Suitability and residue cleanability to be validated separately'],
+        why:'Refrigerant lines must be leak-tight and clean inside. Borate-based flux dissolves oxides on the outer joint surface; the tube bore is protected with nitrogen.',
+        note:'Flux residue must not enter the refrigerant circuit; the tube bore should be protected with a dry nitrogen purge during brazing. Copper-to-copper joints with Cu–P usually need no flux; our enquiry form flags this case.'}},
+    bronz:{img:'gorseller/bronz-kaynagi.jpg', pre:{uygulama:'bronz'},
+      tr:{t:'Bronz kaynağı ve lehim çubuğu', lead:'Alevle bronz kaynağında (braze welding) ana metal eritilmez; Cu–Zn esaslı dolgu çubuğu oksi-asetilen aleviyle eritilir ve borat esaslı flux birleşim yüzeyindeki oksitleri çözer. Borat esaslı malzemeler bazı flux kaplı sert lehim çubuklarının kaplamasında da kullanılır.',
+        pts:['Cu–Zn esaslı pirinç ve bronz dolgu çubuklarıyla alevli birleştirme','Çelik, dökme demir ve bakır alaşımlarında onarım ve birleştirme','Oksi-asetilen aleviyle yüksek sıcaklık uygulamaları','Flux kaplı çubuk üreticileri için hammadde ön değerlendirmesi'],
+        why:'Borat esaslı flux\'lar yüksek sıcaklıkta oksitleri çözer ve dolgu metalinin yüzeyi ıslatmasını sağlar. Bronz kaynağı bu yüzden boraks flux\'ının klasik kullanım alanlarındandır.',
+        note:'Ergiyik metale doğrudan uygulamada genellikle susuz boraks tercih edilir; hidratlı boratlar hızlı ısıtmada kabarır ve sıçrayabilir. Planlanan hidratlı karışımımız pota ve döküm uygulamaları için doğrulanmış değildir; çubuk kaplamaya uygunluğu ayrıca test edilecek.'},
+      en:{t:'Braze welding & brazing rods', lead:'In flame braze welding the base metal is not melted; a Cu–Zn filler rod is melted with an oxy-acetylene flame while borate-based flux dissolves oxides on the joint faces. Borate-based materials are also used in the coating of some flux-coated brazing rods.',
+        pts:['Flame joining with Cu–Zn brass and bronze filler rods','Repair and joining of steel, cast iron and copper alloys','High-temperature work with an oxy-acetylene flame','Raw material pre-assessment for flux-coated rod producers'],
+        why:'Borate-based fluxes dissolve oxides at high temperature and let the filler metal wet the surface, which makes braze welding one of the classic uses of borax flux.',
+        note:'For direct application to molten metal, anhydrous borax is generally preferred; hydrated borates swell and can spatter when heated quickly. Our planned hydrated blend has not been validated for crucible or casting use; suitability for rod coating will be tested separately.'}}
+  };
+  var appDlg=document.getElementById('appDlg'), appBody=document.getElementById('appBody'), appHero=document.getElementById('appHero'), appTitle=document.getElementById('appTitle'), curApp=null;
+  function esc(x){return x.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  function renderApp(){
+    if(!curApp) return; var A=APPS[curApp], L=A[lang()], en=lang()==='en';
+    appHero.style.backgroundImage='url('+A.img+')';
+    appTitle.textContent=L.t;
+    appBody.innerHTML='<p class="alead">'+esc(L.lead)+'</p><div class="acols"><div><h4>'+(en?'Typical use':'Tipik kullanım')+'</h4><ul>'+L.pts.map(function(p){return '<li>'+esc(p)+'</li>';}).join('')+'</ul></div><div><h4>'+(en?'Why boron-based':'Neden bor bazlı')+'</h4><p class="awhy">'+esc(L.why)+'</p><p class="anote">'+esc(L.note)+'</p></div></div>'
+      +'<div class="acta"><button class="btn fire" type="button" data-app-cta><svg aria-hidden="true"><use href="#i-arrow"/></svg>'+(en?'Technical enquiry for this application':'Bu uygulama için teknik talep')+'</button><button class="btn soft" type="button" data-close-app>'+(en?'Close':'Kapat')+'</button></div>';
+  }
+  function openApp(k){ curApp=k; renderApp(); if(appDlg.showModal){appDlg.showModal();}else{appDlg.setAttribute('open','');} }
+  function closeApp(){ if(appDlg.open){ appDlg.close?appDlg.close():appDlg.removeAttribute('open'); } }
+  document.querySelectorAll('button.tile[data-app]').forEach(function(b){b.addEventListener('click',function(){openApp(b.dataset.app);});});
+  appDlg.addEventListener('click',function(e){
+    if(e.target===appDlg||e.target.closest('[data-close-app]')){closeApp();return;}
+    if(e.target.closest('[data-app-cta]')){
+      var pre=APPS[curApp].pre;
+      Object.keys(pre).forEach(function(n){var i=f.querySelector('input[name="'+n+'"][value="'+pre[n]+'"]'); if(i){i.checked=true;}});
+      update(); closeApp(); goTo('rehber');
+    }
+  });
+  btns.forEach(function(b){b.addEventListener('click',renderApp);});
+
+  var saved=null; try{saved=localStorage.getItem('alazbor-lang');}catch(e){}
+  setLang(saved || ((navigator.language||'').slice(0,2)==='tr'?'tr':'en'));
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  /* ---------- hero görseli ---------- */
+  var hero=document.querySelector('.hero');
+  var probe=new Image(); probe.onload=function(){hero.classList.add('has-photo');}; probe.src='gorseller/flux-tozu.jpg';
+
+  /* ---------- GSAP: farklı bölümlere farklı hareket ---------- */
+  if(window.gsap && window.ScrollTrigger && !reduce){
+    gsap.registerPlugin(ScrollTrigger);
+    var heads=document.querySelectorAll('.sec-top h2, .statement h2, .pgrid h2, .fhead h2, .cleft h2');
+    heads.forEach(function(h){h.classList.add('rv-h'); var p=h.closest('[data-reveal]'); if(p) p.removeAttribute('data-reveal');});
+    document.documentElement.classList.add('js-anim');
+    if(lenis){lenis.on('scroll',ScrollTrigger.update);}
+    gsap.from('[data-hero]',{y:34,opacity:0,duration:1,ease:'power3.out',stagger:.09,delay:.15});
+    gsap.to('.photo',{yPercent:10,ease:'none',scrollTrigger:{trigger:hero,start:'top top',end:'bottom top',scrub:true}});
+    heads.forEach(function(h){ gsap.to(h,{clipPath:'inset(0 0 0% 0)',y:0,duration:1.1,ease:'power4.out',scrollTrigger:{trigger:h,start:'top 88%',once:true}}); });
+    ScrollTrigger.batch('[data-reveal]',{start:'top 90%',once:true,onEnter:function(b){gsap.to(b,{opacity:1,y:0,duration:.9,ease:'power3.out',stagger:.1});}});
+    ScrollTrigger.batch('.tile[data-clip]',{start:'top 85%',once:true,onEnter:function(b){gsap.to(b,{clipPath:'inset(0% 0 0 0)',duration:1.2,ease:'power4.inOut',stagger:.15});}});
+    gsap.to('.cmap',{clipPath:'inset(0 0 0 0%)',duration:1.3,ease:'power4.inOut',scrollTrigger:{trigger:'.cmap',start:'top 85%',once:true}});
+    var flow=document.querySelector('.flow');
+    gsap.to(flow,{'--line':1,duration:1.2,ease:'power2.inOut',scrollTrigger:{trigger:flow,start:'top 85%',once:true}});
+    gsap.from('.st',{opacity:0,y:30,duration:.8,ease:'power3.out',stagger:.1,scrollTrigger:{trigger:flow,start:'top 85%',once:true}});
+    gsap.utils.toArray('.st').forEach(function(st){st.removeAttribute('data-reveal');});
+    window.addEventListener('load',function(){ScrollTrigger.refresh();});
+  }
+
+  /* ---------- kıvılcımlar (ekran dışında durur) ---------- */
+  var c=document.getElementById('heat'), x=c.getContext('2d');
+  var W,H,D=Math.min(window.devicePixelRatio||1,1.5), sparks=[], running=false, rafId=0, inView=true;
+  function size(){W=c.clientWidth;H=c.clientHeight;c.width=W*D;c.height=H*D;x.setTransform(D,0,0,D,0,0);}
+  size(); window.addEventListener('resize',size);
+  var N=window.innerWidth<700?30:60;
+  function spawn(){return {x:W*(.35+Math.random()*.65),y:H*(.7+Math.random()*.35),vx:(Math.random()-.5)*.35,vy:-(0.35+Math.random()*1.1),l:0,m:120+Math.random()*180,s:.6+Math.random()*1.8};}
+  for(var i=0;i<N;i++){var s=spawn();s.l=Math.random()*s.m;sparks.push(s);}
+  function frame(t){
+    var k=(t||0)/1000, photo=hero.classList.contains('has-photo');
+    x.globalCompositeOperation='source-over';
+    if(photo){x.clearRect(0,0,W,H);} else {x.fillStyle='#0B0F14';x.fillRect(0,0,W,H);
+      x.globalCompositeOperation='lighter';
+      [[.72,.62,.55,'255,110,40',.55],[.58,.78,.38,'255,190,100',.38],[.86,.4,.4,'200,118,62',.45]].forEach(function(b,j){
+        var bx=W*(b[0]+Math.sin(k*.4+j)*.05), by=H*(b[1]+Math.cos(k*.35+j)*.05), r=Math.max(W,H)*b[2];
+        var g=x.createRadialGradient(bx,by,0,bx,by,r); g.addColorStop(0,'rgba('+b[3]+','+b[4]+')'); g.addColorStop(1,'rgba('+b[3]+',0)'); x.fillStyle=g; x.fillRect(0,0,W,H); });
+    }
+    x.globalCompositeOperation='lighter';
+    sparks.forEach(function(s,ix){
+      s.l++; s.x+=s.vx+Math.sin((s.l+ix)*.05)*.25; s.y+=s.vy;
+      var life=1-s.l/s.m; if(life<=0||s.y<-10){sparks[ix]=spawn();return;}
+      x.fillStyle='rgba(255,'+(160+Math.floor(life*80))+',90,'+(life*.9)+')';
+      x.beginPath(); x.arc(s.x,s.y,s.s*life+.3,0,6.283); x.fill();
+    });
+    if(running) rafId=requestAnimationFrame(frame);
+  }
+  function start(){ if(reduce){frame(0);return;} if(!running){running=true;rafId=requestAnimationFrame(frame);} }
+  function stop(){ running=false; cancelAnimationFrame(rafId); }
+  if('IntersectionObserver' in window){ new IntersectionObserver(function(es){es.forEach(function(e){inView=e.isIntersecting; inView?start():stop();});}).observe(hero); } else { start(); }
+  document.addEventListener('visibilitychange',function(){(document.hidden||!inView)?stop():start();});
+});
+</script>
+</body>
+</html>
