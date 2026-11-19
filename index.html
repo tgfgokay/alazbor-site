@@ -6,6 +6,21 @@
 <title>Bor bazlı endüstriyel flux tozu — Alazbor Kimya</title>
 <meta name="description" content="Alazbor Kimya: boraks pentahidrat ve borik asit esaslı toz flux üreticisi, kuruluş aşamasında; ilk üretim hedefi Yaz 2027. Bakır ve pirinç sert lehim ve alevle bronz kaynağı için. Gemlik / Bursa.">
 <meta name="robots" content="noindex">
+<link rel="canonical" href="https://alazbor.com.tr/">
+<meta name="theme-color" content="#0B0F14">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alazbor Kimya">
+<meta property="og:url" content="https://alazbor.com.tr/">
+<meta property="og:title" content="Bor bazlı endüstriyel flux tozu — Alazbor Kimya">
+<meta property="og:description" content="Bakır ve pirinç sert lehim ile alevle bronz kaynağı için planlanan boraks pentahidrat ve borik asit esaslı toz flux. Gemlik / Bursa, kuruluş aşamasında.">
+<meta property="og:image" content="https://alazbor.com.tr/gorseller/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Alazbor — bor bazlı endüstriyel flux tozu; koyu zemin üzerinde beyaz toz yığını">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="apple-touch-icon" href="gorseller/ikon-180.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%230B0F14'/%3E%3Cpath d='M9 31 20 10l11 21' fill='none' stroke='%23F4F1EC' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='20' cy='24' r='4' fill='%23FF7A2F'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,6 +45,7 @@ a{color:inherit}
 :focus-visible{outline:3px solid var(--ember);outline-offset:3px;border-radius:8px}
 section[id]{scroll-margin-top:80px}
 .wrap{max-width:1320px;margin:0 auto;padding:0 clamp(20px,4vw,56px)}
+@media (min-width:1800px){ .wrap{max-width:1480px} }
 body.en .tr, body:not(.en) .en{display:none !important}
 .kicker{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--copper)}
 .kicker::before{content:"";width:28px;height:2px;background:currentColor}
@@ -83,21 +99,22 @@ nav a:hover::after,nav a.active::after{right:0}
 
 /* ---------- hero (tam ekran görsel) ---------- */
 .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;background:var(--night);color:#F4F1EC;overflow:hidden}
-.photo{position:absolute;inset:0 0 0 15%;background:url(gorseller/flux-tozu.jpg) 50% 58%/cover no-repeat;opacity:0;transition:opacity 1.2s;transform-origin:62% 58%}
+.photo{position:absolute;inset:0 0 0 clamp(15%,calc(50% - 260px),45%);background:url(gorseller/flux-tozu.jpg) 50% 58%/cover no-repeat;opacity:0;transition:opacity 1.2s;transform-origin:62% 58%}
 .has-photo .photo{opacity:1;animation:kb 18s ease-in-out infinite alternate}
 @keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.1)}}
 #heat{position:absolute;inset:0;width:100%;height:100%;display:block}
 .hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:linear-gradient(90deg,rgba(11,15,20,.9) 0%,rgba(11,15,20,.8) 28%,rgba(11,15,20,.4) 46%,rgba(11,15,20,0) 58%),linear-gradient(180deg,rgba(11,15,20,.55) 0%,transparent 26%,transparent 62%,rgba(11,15,20,.85) 100%)}
+  background:linear-gradient(90deg,rgba(11,15,20,.94) 0%,rgba(11,15,20,.86) calc(50% - 100px),rgba(11,15,20,.45) calc(50% + 60px),rgba(11,15,20,0) calc(50% + 260px)),linear-gradient(180deg,rgba(11,15,20,.55) 0%,transparent 26%,transparent 62%,rgba(11,15,20,.85) 100%)}
 @media (max-width:820px){ .photo{inset:0;background-position:60% 58%} .hero::after{background:linear-gradient(180deg,rgba(11,15,20,.6) 0%,rgba(11,15,20,.35) 35%,rgba(11,15,20,.88) 80%)} }
 .hero .wrap{position:relative;z-index:2;width:100%;padding-bottom:9vh;padding-top:140px}
 .hero h1{font-size:clamp(42px,5.4vw,78px);line-height:.98;max-width:11.5ch;margin-top:18px}
 .hero h2{font-size:clamp(22px,2vw,30px);margin-top:14px;background:linear-gradient(90deg,var(--gold),var(--ember) 55%,var(--copper));-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
 .hero .lead{font-size:clamp(16px,1.5vw,20px);max-width:580px;margin:22px 0 0;color:#DCD6CC}
-.status{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:22px;padding:8px 14px;border:1px solid rgba(244,241,236,.28);border-radius:999px;font-size:13px;font-weight:600;color:#E8E2D8;background:rgba(11,15,20,.45);backdrop-filter:blur(6px)}
-.status i{width:8px;height:8px;border-radius:50%;background:var(--ember);box-shadow:0 0 10px var(--ember)}
+.status{display:inline-flex;align-items:flex-start;gap:10px;margin-top:22px;padding:8px 16px 8px 14px;border:1px solid rgba(244,241,236,.28);border-radius:999px;font-size:13px;font-weight:600;line-height:20px;color:#E8E2D8;background:rgba(11,15,20,.45);backdrop-filter:blur(6px)}
+.status i{flex:none;width:8px;height:8px;margin-top:6px;border-radius:50%;background:var(--ember);box-shadow:0 0 10px var(--ember)}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 .cta .btn{min-height:52px;padding:0 26px}
+@media (max-width:560px){ .status{border-radius:14px} .cta .btn{flex:1 1 100%} }
 
 /* ---------- statement ---------- */
 .statement{padding:130px 0 90px}
@@ -831,7 +848,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
   /* ---------- hero görseli ---------- */
   var hero=document.querySelector('.hero');
-  var probe=new Image(); probe.onload=function(){hero.classList.add('has-photo');}; probe.src='gorseller/flux-tozu.jpg';
+  var probe=new Image(); probe.onload=function(){hero.classList.add('has-photo'); var hc=document.getElementById('heat'); if(hc){hc.getContext('2d').clearRect(0,0,hc.width,hc.height);}}; probe.src='gorseller/flux-tozu.jpg';
 
   /* ---------- GSAP: farklı bölümlere farklı hareket ---------- */
   if(window.gsap && window.ScrollTrigger && !reduce){
@@ -840,7 +857,11 @@ document.addEventListener('DOMContentLoaded',function(){
     heads.forEach(function(h){h.classList.add('rv-h'); var p=h.closest('[data-reveal]'); if(p) p.removeAttribute('data-reveal');});
     document.documentElement.classList.add('js-anim');
     if(lenis){lenis.on('scroll',ScrollTrigger.update);}
-    gsap.from('[data-hero]',{y:34,opacity:0,duration:1,ease:'power3.out',stagger:.09,delay:.15});
+    /* açılış yazısı: sekme görünürse kısa giriş; görünmüyorsa ya da 2,5 sn'de bitmezse doğrudan görünür */
+    if(document.visibilityState==='visible'){
+      var intro=gsap.from('[data-hero]',{y:34,opacity:0,duration:1,ease:'power3.out',stagger:.09,delay:.15});
+      setTimeout(function(){ if(intro.progress()<1){ intro.progress(1).kill(); gsap.set('[data-hero]',{clearProps:'opacity,transform'}); } },2500);
+    }
     gsap.to('.photo',{yPercent:10,ease:'none',scrollTrigger:{trigger:hero,start:'top top',end:'bottom top',scrub:true}});
     heads.forEach(function(h){ gsap.to(h,{clipPath:'inset(0 0 0% 0)',y:0,duration:1.1,ease:'power4.out',scrollTrigger:{trigger:h,start:'top 88%',once:true}}); });
     ScrollTrigger.batch('[data-reveal]',{start:'top 90%',once:true,onEnter:function(b){gsap.to(b,{opacity:1,y:0,duration:.9,ease:'power3.out',stagger:.1});}});
